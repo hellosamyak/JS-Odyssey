@@ -1,0 +1,3 @@
+[submodule "projects/04-GuesstheNumber"]
+	path = projects/04-GuesstheNumber
+	url = https://github.com/hellosamyak/Guess-the-Number

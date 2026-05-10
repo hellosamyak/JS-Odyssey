@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMI Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="left">
+      <h1>BMI</h1>
+      <h2>Body Mass Index Calculator</h2>
+      <p>
+        A clean and modern way to check your fitness level.
+        Enter your height and weight to calculate your BMI.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Calculate Your BMI</h3>
+
+      <form>
+        <input type="number" placeholder="Height (cm)" id="height">
+        <input type="number" placeholder="Weight (kg)" id="weight">
+
+        <button type="submit">Calculate</button>
+
+        <div class="result">
+          Your BMI will appear here
+        </div>
+      </form>
+
+      <div class="guide">
+        <h4>BMI Guide</h4>
+
+        <div id="underweight">
+          <span>Underweight</span>
+          <b>Below 18.50</b>
+        </div>
+
+        <div id="normal">
+          <span>Normal</span>
+          <b>18.50 - 24.90</b>
+        </div>
+
+        <div id="overweight">
+          <span>Overweight</span>
+          <b>25 - 29.90</b>
+        </div>
+
+        <div id="obese">
+          <span>Obese</span>
+          <b>30+</b>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM-4</title>
+</head>
+
+<body style="color: yellow; background-color: black;">
+  <ul class="language">
+    <li>JavaScript</li>
+  </ul>
+
+  <script>
+    function addLang(langName) {
+      const li = document.createElement('li')
+      li.innerHTML = `${langName}`
+      document.querySelector('.language').appendChild(li)
+    }
+    addLang('Python')
+
+    function addOptiLang(langName) {
+      const li = document.createElement('li')
+      li.appendChild(document.createTextNode(`${langName}`))
+      document.querySelector('.language').appendChild(li)
+    }
+    addOptiLang('Solidity')
+
+    // Edit
+
+    const firstLang = document.querySelector('li:nth-child(1)')
+    // console.log(firstLang);
+    const newLi = document.createElement('li')
+    newLi.textContent = 'TypeScript'
+    firstLang.replaceWith(newLi)
+
+    const secondLang = document.querySelector('li:nth-child(2)')
+    secondLang.outerHTML = '<li>Rust</li>'
+
+    // Remove (very easy)
+
+    const lastLang = document.querySelector('li:last-child')
+    lastLang.remove()
+  </script>
+</body>
+
+</html>

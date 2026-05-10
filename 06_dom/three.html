@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document Object Model with CaC</title>
+</head>
+
+<body style="background-color: #212121; color: #fff;">
+</body>
+<script>
+  div = document.createElement('div');
+  div.className = 'main';
+  div.id = Math.round(Math.random() * 10 + 1);
+  div.setAttribute('title', 'div-main')
+  const addText = document.createTextNode('Samyak codes with JS');
+
+  div.appendChild(addText)
+  console.log(div);
+
+  document.body.appendChild(div)
+</script>
+
+</html>
