@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Countries Gallery</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 24px;
+      background: #f4f6f8;
+      color: #222;
+    }
+
+    h1 {
+      margin-top: 0;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+
+    li {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+    }
+
+    img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .caption {
+      padding: 12px 14px;
+      font-weight: 600;
+    }
+
+    .bottom-link {
+      display: inline-block;
+      margin-top: 24px;
+      color: #0b57d0;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .bottom-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Images from Various Countries</h1>
+  <ul id="images">
+    <li>
+      <img id="france"
+        src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=800&q=80"
+        alt="Paris, France">
+      <div class="caption">France</div>
+    </li>
+    <li>
+      <img id="india" src="https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?auto=format&fit=crop&w=800&q=80"
+        alt="Taj Mahal, India">
+      <div class="caption">India</div>
+    </li>
+    <li>
+      <img id="japan" src="https://images.unsplash.com/photo-1505761671935-60b3a7427bad?auto=format&fit=crop&w=800&q=80"
+        alt="Tokyo, Japan">
+      <div class="caption">Japan</div>
+    </li>
+    <li>
+      <img id="usa" src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&fit=crop&w=800&q=80"
+        alt="New York, USA">
+      <div class="caption">USA</div>
+    </li>
+  </ul>
+
+  <a id="google" class="bottom-link" href="https://www.google.com" target="_blank" rel="noopener noreferrer">Visit
+    Google</a>
+</body>
+
+<script>
+  // document.getElementById('india').onclick = function () { // not optimal
+  //   alert("clicked on India")
+  // }
+
+  // attachEvent()
+  // jQuery - on
+
+  // to learn:
+  // type, timestamp, defaultPrevented
+  // target, toElement, srcElement, currentTarget,
+  // clientX, clientY, screenX, screenY
+  // altkey, ctrlkey, shiftkey, keyCode
+
+  // Event propagation => 1. Event bubbling => false (e propagates from inner elem to the outer) & 2. Event capturing => true (e propagates from outer elem to inner)
+
+  // document.getElementById('images').addEventListener('click', function (e) {
+  //   console.log("clicked inside the ul");
+  // }, false) // default => false => event bubbling (widely used)
+
+  // document.getElementById('france').addEventListener('click', function (e) {
+  //   console.log("clicked on France");
+  //   // e.stopPropagation() // stops event propagation
+  // }, false)
+
+  // document.getElementById('google').addEventListener('click', function (e) {
+  //   // e.preventDefault();
+  //   e.stopPropagation()
+  //   console.log("clicked on Google");
+  // }, false)
+
+  // write a script to delete the image when clicked
+
+  document.querySelector('#images').addEventListener('click', function (e) {
+    // console.log(e.target.tagName);
+
+    if (e.target.tagName === 'IMG') {
+      let removeImg = e.target.parentNode
+      removeImg.remove()
+      // removeImg.parentNode.removeChild(removeImg) // can also be done this way
+    }
+  }, false)
+
+</script>
+
+</html>
