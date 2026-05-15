@@ -12,13 +12,20 @@
   <button id="stop">Stop</button>
 </body>
 <script>
+
   function saySamyak() {
     console.log('Samyak');
   }
   function changeh1() {
     document.querySelector('h1').innerHTML = 'Learning with CaC'
   }
-  setTimeout(changeh1, 3000) // pass reference here, don't call the function*
+  const timeout = setTimeout(changeh1, 3000) // pass reference here, don't call the function*
+
+  document.querySelector('button').addEventListener('click', function () {
+    clearInterval(timeout) // clearIntenval function, the counter for setInterval
+    console.log('Stopped by clicking the button');
+  })
+
 </script>
 
 </html>
