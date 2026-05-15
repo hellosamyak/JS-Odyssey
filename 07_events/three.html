@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>JS JS JS</h1>
+  <button id="start">Start</button>
+  <button id="stop">Stop</button>
+
+  <script>
+
+    let intervalId;
+
+    let interval = function (str) {
+      console.log(str);
+    }
+
+    document.getElementById('start').addEventListener('click', function () {
+      if (!intervalId) {
+        intervalId = setInterval(interval, 2000, 'hey')
+      }
+    })
+
+    document.getElementById('stop').addEventListener('click', function () {
+      clearInterval(intervalId)
+      intervalId = null;
+    })
+
+  </script>
+</body>
+
+</html>
