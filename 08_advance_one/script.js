@@ -4,6 +4,7 @@ const followers = document.getElementById('followers')
 const following = document.getElementById('following')
 const profile = document.getElementById('profile')
 const showBtn = document.querySelector('button')
+const p = document.querySelector('p')
 const requestUrl = 'https://api.github.com/users/hellosamyak'
 
 
@@ -22,6 +23,8 @@ showBtn.addEventListener('click', () => {
       followers.textContent = data.followers
       following.textContent = data.following
       profile.style.display = 'block'
+      showBtn.style.display = 'none'
+      p.innerText = `Fetched data from ${requestUrl}`
     }
   }
   xhr.send()
