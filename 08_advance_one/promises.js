@@ -54,13 +54,13 @@ promiseFour.then((user) => {
 
 const promiseFive = new Promise(function (resolve, reject) {
   setTimeout(() => {
-    let str = ''
+    let str = 'str'
     if (str) {
       resolve(`The string is ${str}`)
     } else {
       reject('FATAL: Bad response')
     }
-  })
+  }, 1000)
 })
 
 // async await
@@ -91,4 +91,4 @@ getUsers()
 fetch('https://api.github.com/users/hellosamyak')
   .then((response) => { return response.json() })
   .then((data) => console.log(data))
-  .catch((err) => console.log(error))
+  .catch((err) => console.log(err))
