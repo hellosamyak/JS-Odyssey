@@ -1,4 +1,4 @@
-// Object literal
+// Object literal (literally an object {})
 
 const user = {
   username: 'jainai',
@@ -34,7 +34,7 @@ const userOne = new User('irasmus', 5, false)
 console.log(userOne);
 
 const userTwo = new User('harry', 10, true)
-console.log(userTwo.constructor); // constructor is the function User (itself)
+console.log(userTwo.constructor); // constructor is reference of itself, i.e., function User (itself) here
 
 
 // read about instanceof operator in JS!
