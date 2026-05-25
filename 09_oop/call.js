@@ -3,7 +3,7 @@ function createUsername(username) {
 }
 
 function createUser(username, email, password) {
-  createUsername.call(this, username) // call method & using this keyword here to hold the context of the prev method, even when it goes out of the execution context
+  createUsername.call(this, username) // using call method & 'this' keyword here to hold the context of the prev method, even when it goes out of the execution context
   this.email = email
   this.password = password
 }
